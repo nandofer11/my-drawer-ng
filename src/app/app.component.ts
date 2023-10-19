@@ -9,6 +9,10 @@ import {
 import { filter } from 'rxjs/operators'
 import { Application } from '@nativescript/core'
 
+import { firebase } from '@nativescript/firebase'
+import '@nativescript/firebase-firestore';
+
+
 @Component({
   selector: 'ns-app',
   templateUrl: 'app.component.html',
@@ -22,6 +26,18 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+    firebase.init({
+      // Optionally pass in properties for database, authentication and cloud messaging,
+      // see their respective docs.
+    }).then(() => {
+      console.log("firebase.init done");
+    }, error => {
+      console.log(`firebase.init error: ${error}`);
+    }
+    );
+
     this._activatedUrl = '/home'
     this._sideDrawerTransition = new SlideInOnTopTransition()
 

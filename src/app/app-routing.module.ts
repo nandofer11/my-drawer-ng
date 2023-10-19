@@ -9,21 +9,25 @@ const routes: Routes = [
     loadChildren: () => import('~/app/home/home.module').then((m) => m.HomeModule),
   },
   {
-    path: 'browse',
-    loadChildren: () => import('~/app/browse/browse.module').then((m) => m.BrowseModule),
+    path: 'report',
+    loadChildren: () => import('~/app/report/report.module').then((m) => m.ReportModule),
   },
   {
-    path: 'search',
-    loadChildren: () => import('~/app/search/search.module').then((m) => m.SearchModule),
+    path: 'user',
+    loadChildren: () => import('~/app/user/user.module').then((m) => m.UserModule),
   },
   {
-    path: 'featured',
-    loadChildren: () => import('~/app/featured/featured.module').then((m) => m.FeaturedModule),
+    path: 'profile',
+    loadChildren: () => import('~/app/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
     path: 'settings',
     loadChildren: () => import('~/app/settings/settings.module').then((m) => m.SettingsModule),
   },
+  {
+    path: 'assistence',
+    loadChildren: () => import('~/app/assistence/assistence.module').then((m) => m.AssistenceModule),
+  }
 ]
 
 @NgModule({

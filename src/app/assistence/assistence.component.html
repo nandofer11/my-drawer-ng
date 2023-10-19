@@ -1,0 +1,14 @@
+<ActionBar class="action-bar">
+    <NavigationButton visibility="hidden"></NavigationButton>
+    <GridLayout columns="50, *">
+      <Label class="action-bar-title" text="Registro de asistencia" colSpan="2"></Label>
+  
+      <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+    </GridLayout>
+  </ActionBar>
+  
+  <StackLayout backgroundColor="#3c495e">
+    <Label text="first" height="70" backgroundColor="#43B3F4"></Label>
+    <Button text="Registrar asistencia" (tap)="registerAssistence()"></Button>
+    <Button text="Finalizar asistencia"></Button>
+  </StackLayout>   

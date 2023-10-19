@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
 
-import { SearchComponent } from './search.component'
+import { ReportComponent } from './report.component'
 
-const routes: Routes = [{ path: '', component: SearchComponent }]
+const routes: Routes = [{ path: '', component: ReportComponent }]
 
 @NgModule({
   imports: [NativeScriptRouterModule.forChild(routes)],
   exports: [NativeScriptRouterModule],
 })
-export class SearchRoutingModule {}
+export class ReportRoutingModule {}
